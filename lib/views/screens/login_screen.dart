@@ -85,15 +85,13 @@ class LoginScreen extends StatelessWidget {
                                 final response = await loginUser(
                                     email: emailcontroller.text,
                                     password: passwordcontroller.text);
-                                    if(response){
-                                        Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            DependentDropdownExample()));
-                                    }
-
-                                
+                                if (response) {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              DependentDropdownExample()));
+                                }
                               },
                               child: Text('Login'),
                             ),
